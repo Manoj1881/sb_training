@@ -1,2 +1,1 @@
-# htmltraining
-Sample html project
+# Sb Training
