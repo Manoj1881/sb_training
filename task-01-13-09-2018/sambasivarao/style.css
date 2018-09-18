@@ -1,0 +1,64 @@
+
+body{
+    background-color: #f2f2f2;
+    margin: 0px;
+}
+.navbar{
+    
+   background-color: #fff;
+   overflow: hidden;
+   
+    
+}
+
+.left ul li, .right ul li  {
+
+    display: inline;
+    padding: 0px 30px;
+    font-weight:normal;
+    vertical-align: middle;
+    font-size: 18px;    
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.left, .center, .right {
+    display:inline-block;
+    
+} 
+.left{
+    width: 30%;
+    text-align-last: right;
+    
+}
+.right{
+    width: 30%;
+}
+.center{
+    width: 30%;
+    text-align-last: center;
+    vertical-align: middle;
+}
+img{
+    width: 400px;
+    height: 30px;
+    
+}
+ .active{
+    color: green;
+}
+@media only screen and (max-width:767px){
+
+.center{
+    display: none;
+}
+.left,.right li {
+    display: block;
+
+}
+
+}
+@media only screen and (max-width:767px}
