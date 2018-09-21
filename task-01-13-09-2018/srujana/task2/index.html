@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script>
+        function validate()
+      {
+      
+         if( document.myForm.firstname.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.firstname.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.surname.value == "" )
+         {
+            alert( "Please provide your surname!" );
+            document.myForm.surname.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.Mobilenumberoremailaddress.value == "")
+         {
+            alert( "Please provide a Mobilenumberoremailaddress " );
+            document.myForm.Mobilenumberoremailaddress.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.password.value == "" )
+         {
+            alert( "Please provide your password!" );
+            return false;
+         }
+         return( true );
+      }
+             </script>
+             </head>
+             
+             
+<body>
+    <div class="header">
+        <header>
+           <h1>Facebook</h1>
+    </header>
+    </div>
+        <div class="page">
+        <h1>Create an account</h1>
+        <p>It's free and always will be.</p>
+<form name="myForm" action="" onsubmit="return validate()" method="post">
+       <input type="text"  name="First Name" value="firstname"> 
+       <input type="text" name="Surname" value="surname"><br><br>
+        <input type="text" name="Mobile number or email address"value=" Mobilenumberoremailaddress"><br><br>
+        <input type="text" name="Re-enter mobile number or email address" value="Re-entermobilenumberoremailaddress"><br><br>
+        <input type="password"name="New password" value="New password"><br><br>
+        Birthday <input type="date" name="DateOfBirth" value="date"><br><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+        <input type="submit" text="SignUp" value="SignUp">
+    </form>
+        </div>
+</body>
+</html>

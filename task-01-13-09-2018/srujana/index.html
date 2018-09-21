@@ -4,102 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Navigation bar</title>
+    <link rel="stylesheet" href="style.css">
 
-<style>
-  *{
-    margin: 0px;
-    padding: 0px;
-  }
-  nav{
-    text-align: center;
-  }
-body{
-background-color:#f2f2f2;
-font-family: sans-serif;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ffffff;
-    vertical-align: middle;
-    display: inline-block;
-    
-}
-li {
-   display: inline-block;
-    vertical-align: middle;
-    padding: 15px 35px 10px 15px;
-}
-li a {
-    list-style: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    display: inline-block;
-}
-.active {
-    color: green;
-}
-img, .logo{
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
-  height: 65px;
-}
-@media screen and (max-width: 767px) {
-
-.img-max {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.max-width {
-  max-width: 100% !important;
-}
-
-.mobile-wrapper {
-  width: 85% !important;
-  max-width: 85% !important;
-}
-
-.mobile-padding {
-  padding-left: 5% !important;
-  padding-right: 5% !important;
-}
-
-
-.mobile .mobile-hide {
-   display: none !important;
-}
-.mobile .mobile-show {
-   display: block !important;
-   
-}
-
-}
-.desk-hide {
-    display: none !important;
- }
-.desk-show {
-    display: block !important;
- }
-</style>
 </head>
 <body>
 <nav>
   <div class="mobile">
-      <div class="mobile-show desk-hide"><img src="sb-logo.svg" alt=""></div>
-  </div>
+      <div class="mobile-show"><img src="./images/sb-logo.svg" alt=""></div>
+    </div>
+  <input class="toggle-navigation-x" type="checkbox" id="header-expand-checkbox">
+<label for="header-expand-checkbox"><span></span></label>
+
 <ul>
   <li><a class="active" href="#">Home</a></li>
   <li><a href="#">About us</a></li>
   <li><a href="#">Work</a></li>
-  <li><div class="desk-show mobile-hide"><img src="sb-logo.svg" alt=""></div></li>
+  <li><div class="mobile-hide"><img src="./images/sb-logo.svg" alt=""></div></li>
   <li><a href="#">Careers</a><li>
   <li><a href="#">Technology</a><li>
  <li> <a href="#">ContactUs</a><li>

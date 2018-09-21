@@ -31,7 +31,7 @@ ul li a img {
     display: none;
 }
 @media only screen and (max-width: 767px) {
-    ul .logo{
+    ul .pic{
         display: none;
     }
     ul{
@@ -49,7 +49,7 @@ ul li a img {
         width: 100%;
         padding: 10px 20px;
         background-color: #fff;
-        box-sizing: border-box;
+        box-sizing: border-box; 
     }
     .toggle a, .toggle label{
         display: inline-block;    
