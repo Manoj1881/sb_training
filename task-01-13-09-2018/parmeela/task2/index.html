@@ -1,0 +1,53 @@
+<html>
+ <head>
+   <title>js validation page</title>
+   <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+
+function check_info()
+{
+var fname = document.getElementById('FName').value;
+var LName = document.getElementById('LName').value;
+var password=document.getElementById('password').value;
+}
+
+
+    if(Fname =="" || Lname =="")
+    {
+      alert("please fill all the fields")
+    }
+    else{
+      return true;
+    }
+       </script>
+ </head>
+ <body><h1 class="header">facebook</h1><br>
+   <h2>Create a new account</h2><br>
+   <p>It 's free and always will be</p><br>
+   <form action="submission.html" method="post" onsubmit="return check_info();">
+
+
+     <input type="text" placeholder="FirstName" id="FName">
+    <input type="text" placeholder="LastName" id ="LName">
+     <br>
+     <input type="text" style="width: 300px;" name="Email" placeholder="Enter mobile number or email address"><br>
+     <input type="password" placeholder="Enter new password"id="password"><br>
+     Birthday <input type="date"><br><br>
+
+   </label><label class="control control--radio">
+       <input type="radio" name="radio" checked="checked"/>Male
+     </label>&nbsp;&nbsp;
+   </label><label class="control control--radio">
+       <input type="radio" name="radio" checked="checked"/>Female
+     </label>
+     <br><br>
+<p>By clicking sign up you agree to our <a href = "">Terms,DataPolicy</a>and<br><a href="">cookie policy</a>.You may receive SMS notifications from us and opt out at anytime </p>
+     <br><br>
+      <input type="submit" value="signup">
+
+
+   </form>
+ </body>
+</html> 
+
