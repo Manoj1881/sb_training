@@ -1,76 +1,57 @@
-
 body{
-    text-align:left;
+    text-align:center;
     width:100%;
-    margin:left;
-    padding:0px;
     font-family:sans-serif;
     background-color: rgb(247,247,247);
     
 } 
-.header{
+.header h1{
     background-color: rgb(59,79,152);
     color:rgb(247,247,247);
-    padding:6px ;
+    padding:15px ;
+    text-align: left;
 }
 .page{
 margin:550px 50px 250px 390px;
 padding:30px 20px 20px 40px;
 text-align:left;
-}
-.page h1
-{
-margin:0px;
-font-size:37px;
-color:#2E2E2E;
-}
-.page p
-{
-font-size:18px;
-color:#2E2E2E;
-}
-.page 
-{
-list-style-type:none;
 margin-top:10px;
 }
-.page  #firstname {
-width:33%;
+.page h1 {
+	font-size: 36px;
+	
 }
-.page #surname {
-margin-left:2%;
-width:33%
+.page p {
+    font-size: 20px;
+font-weight:normal;
+padding:0 20px;
 }
-.page  input[type="text"],input[type="password"]
+	
+.page  #firstname #sname {
+width:250px;
+}
+
+.page  input[type="text"],input[type="password"],input[type ="email"]
 {
-width:70%;
-height:40px;
-border-radius:5px;
-padding-left:10px;
-font-size:18px;
-border:1px solid #BDBDBD;
+    width:250px;
+    padding: 12px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} 
+
+
+.page input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align:center;
 }
-.page a
-{
-margin-left:10px;
-color:#045FB4;
-text-decoration:none;
-font-size:11px;
-display: inline-block;
-vertical-align: middle;
-line-height:15px;
-}
-.page #terms a{
-    color:#424242;
-    font-size: 11px;
-    display:inline;
-}
-.page input[type="submit"]{
-    border:1px solid;
-   font-size:19px;
-   height:45px;
-  color:#fff;
-    background-color:#578843;
-    width:205px;
-    padding: 10px 10px;
+.page .terms p{
+    font-size:1px;
 }
