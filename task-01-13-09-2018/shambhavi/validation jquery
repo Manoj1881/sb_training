@@ -1,20 +1,20 @@
 $(document).ready(function() {
  
-    $('#firstname').submit(function(e) {
+    $('#first_form').submit(function(e) {
       e.preventDefault();
-      var firstname = $('#firstname').val();
-      var lastname = $('#lastname').val();
+      var first_name = $('#first_name').val();
+      var last_name = $('#last_name').val();
       var email = $('#email').val();
-      var new password = $('#new password').val();
+      var password = $('#password').val();
       var dob=$('#dob').val();
    
       $(".error").remove();
    
-      if (firstname.length == "") {
-        $('#ffirstname').after('<span class="error">This field is required</span>');
+      if (first_name.length == "") {
+        $('#first_name').after('<span class="error">This field is required</span>');
       }
-      if (lastname.length < 1) {
-        $('#lastname').after('<span class="error">This field is required</span>');
+      if (last_name.length < 1) {
+        $('#last_name').after('<span class="error">This field is required</span>');
       }
       if (email.length < 1) {
         $('#email').after('<span class="error">This field is required</span>');
@@ -25,14 +25,15 @@ $(document).ready(function() {
           $('#email').after('<span class="error">Enter a valid email</span>');
         }
       }
-      if (new password.length < 8) {
-        $('#newpassword').after('<span class="error">Password must be at least 8 characters long</span>');
+      if (password.length < 8) {
+        $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
       }
       if(dob == ""){
                 $('#dob').after('<span class="error">This field is required</span>');
          }
     });
 });
+
     $(document).ready(function() {
     var max_fields      = 10; 
     var wrapper         = $(".inputadded"); 
@@ -51,3 +52,4 @@ $(document).ready(function() {
   });
 
     
+   
