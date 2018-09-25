@@ -1,0 +1,36 @@
+<html>
+        <head>
+    <script>
+        function val(){
+            if(frm.phone.value==""){
+                alert("please enter phoneno");
+                frm.phone.focus();
+                return false;
+            }
+            if(isNaN(frm.phone.value)){
+                alert("invalid");
+                frm.phone.focus();
+                return false;
+
+            }
+            if((frm.phone.value).length<10){
+                alert("phone should be min 10 digits");
+                frm.phone.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+   
+
+    </head>
+    <body>
+        <form action="" name="frm" method="POST" onsubmit="return val();">
+            <input type="text" name="phone" placeholder="enter phone no">
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+
+
+
