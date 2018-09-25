@@ -88,35 +88,11 @@ h1 {
   color: #333;
   display:inline-block;
 }
-.leftbar {
-  
-  padding-bottom:10px;
-  margin-top:20px;
-}
-.iconwrap {
-  margin-right:20px;
-  width:55px;
-}
-.rowtext {
-  font-size:16px;
-  font-weight:bold;
-  color:#333;
-}
-.fb1 {
-  display:inline-block;
-  vertical-align: middle;
-}
-.rowtext2 {
-  font-size:15px;
-  color:#666;
-  margin-left:10px;
-}
 #rightbod {
   display:inline-block;
-  vertical-align:top;
   width:399px;
   height:200px;
-  float:right;
+  float:left;
 }
 .signup {
   font-size:36px;
@@ -165,7 +141,6 @@ h1 {
   height:30px;
   font-size: 13px;
   border: 1px solid #bdc7d8;
-  -webkit-border-radius: 5px;
   color:#141823;
 }
 .why {
