@@ -1,0 +1,53 @@
+$(document).ready(function() {
+ 
+    $('#firstname').submit(function(e) {
+      e.preventDefault();
+      var firstname = $('#firstname').val();
+      var lastname = $('#lastname').val();
+      var email = $('#email').val();
+      var new password = $('#new password').val();
+      var dob=$('#dob').val();
+   
+      $(".error").remove();
+   
+      if (firstname.length == "") {
+        $('#ffirstname').after('<span class="error">This field is required</span>');
+      }
+      if (lastname.length < 1) {
+        $('#lastname').after('<span class="error">This field is required</span>');
+      }
+      if (email.length < 1) {
+        $('#email').after('<span class="error">This field is required</span>');
+      } else {
+        var regEx =/^\S+@\S+\.\S+$/;
+        var validEmail = regEx.test(email);
+        if (!validEmail) {
+          $('#email').after('<span class="error">Enter a valid email</span>');
+        }
+      }
+      if (new password.length < 8) {
+        $('#newpassword').after('<span class="error">Password must be at least 8 characters long</span>');
+      }
+      if(dob == ""){
+                $('#dob').after('<span class="error">This field is required</span>');
+         }
+    });
+});
+    $(document).ready(function() {
+    var max_fields      = 10; 
+    var wrapper         = $(".inputadded"); 
+    var add_button      = $(".button"); 
+    
+    var x = 1; 
+    $(add_button).click(function(e){ 
+        e.preventDefault();
+        if(x < max_fields){ 
+            x++; 
+            $(wrapper).append('<input type="text" name="mytext[]"><br>'); 
+        }
+
+    
+});
+  });
+
+    

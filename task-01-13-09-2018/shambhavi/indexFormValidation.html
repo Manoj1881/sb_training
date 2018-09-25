@@ -1,114 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 </head>
 <body>
-    <script type="text/javascript">
-  alert("This alert box was called with the onload event");
-</script>
-<script type="text/javascript" src="/Users/apple/Desktop/Desktop/javascript1.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
+<script type="text/javascript" src="/Users/apple/Desktop/fb form/javascript1.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("tr").click(function(){
+        $(this).hide();
+    });
+});
+</script>
 <div id="navwrapper">
+<div id="navbar"> <table class="tablewrapper">
+<tr>
+<td class="row1">Email or Phone</td>
+<td class="row1">Password</td>
+</tr>
+<tr>
+<td><input type="text" class="inputtext">
+</td>
+<td><input type="text" class="inputtext">
+</td>
+<td><div id="button">Log In</div></td>
+</tr>
+<tr>
+<td>
+<div class="row2"><input type="checkbox" checked>Keep me logged in</div></td>
+<td class="row2 h">Forgot your password?</td>
+</table>
 
-  <div id="navbar"> <table class="tablewrapper">
-      
-    <tr>
-      <td class="row1">Email or Phone</td>
-      <td class="row1">Password</td>
-    </tr>
+<h1 class="logowrapper">facebook</h1>
+  <form action="" method="post" onsubmit="return validateform();">
 
-    <tr>
-      <td><input type="text" class="inputtext">
-      </td>
-      <td><input type="text" class="inputtext">
-      </td>
-      <td><div id="button">Log In</div></td>
-    </tr>
-
-    <tr>
-      <td>
-        <div class="row2"><input type="checkbox" checked>Keep me logged in</div></td>
-      <td class="row2 h">Forgot your password?</td>
-  </table>
+<div id="rightbod">
+<div class="signup bolder">Sign Up</div>
+<div class="free bolder">It's free and always will be</div>
+<div class="formbox">
+<input type="text" class="inputbody in1" placeholder="firstName" id="firstname">
+<input type="text" class="inputbody in1 fr" placeholder="lastName" id="lastname"></div>
+<input type="text" class="inputbody in2" placeholder="Email" id="email">
+<input type="text" class="inputbody in2" placeholder=" mobile number" id= "mobile number">
+<input type="text" class="inputbody in2" placeholder="New password" id="new password">
+<div class="bday">Birthday</div>
+<input type="number" class="bday" placeholder="Day">
+<input type="number" class="bday" placeholder="month">
+<input type="number" class="bday" placeholder="year">
+<div class="fb1 why h">Why do I need to provide my birthday?</div>
 
 
-    <h1 class="logowrapper">$hambook</h1>
-  </div>
-  </div>
+<div class="formbox mt1">
+<span data-type="radio" class="spanpad">
+<input type="radio" id="fem" class="m0">
+<label for="fem" class="gender">Female</label>
+<input type="radio" id="male" class="m0">
+<label for="male" class="gender">Male</label></span>
 
-  <div id="contentwrapper">
-    <div id="content">
-      
-      <div id="leftbod">
-        
-        <div class="connect bolder">
-          Connect with friends and the
-          world around you on Facebook.</div>
-        
-       
-      <div id="rightbod">
-        <div class="signup bolder">Sign Up</div>
-        <div class="free bolder">It's free and always will be</div>
-        
-        <div class="formbox">
-        <input type="text" class="inputbody in1" name="name" placeholder="First name">
-        <input type="text" class="inputbody in1 fr" placeholder="Last name">
-        </div>
+<div class="formbox">
+<div class="agree">
+By clicking Sign Up, you agree to our <div class="link">Terms</div> and that you have read our <div class="link">Data Use Policy</div>, including our <div class="link">Cookie Use</div>.
+</div>  
+</div>
 
-        <div class="formbox">
-        <input type="text" class="inputbody in2" placeholder="Email or mobile number">
-        </div>
-
-        <div class="formbox">
-        <input type="text" class="inputbody in2" placeholder="Re-enter mobile number">
-        </div>
-
-        <div class="formbox">
-        <input type="text" class="inputbody in2" placeholder="New password">
-        </div>
-        
-        <div class="formbox">
-        <div class="bday">Birthday</div>
-        </div>
-        <div class="formbox">
-          <div class="formbox">
-        <input type="number" class="bday" placeholder="Day">
-        </div>
-        <div class="formbox">
-        <input type="number" class="bday" placeholder="month">
-        </div>
-        <div class="formbox">
-        <input type="number" class="bday" placeholder="year">
-        </div>
-
-            <div class="fb1 why h">Why do I need to provide my birthday?</div></div>
-            <div class="formbox mt1">
-              <span data-type="radio" class="spanpad">
-                <input type="radio" id="fem" class="m0">
-                <label for="fem" class="gender">Female
-                </label>
-                <input type="radio" id="male" class="m0">
-                <label for="male" class="gender">Male
-                </label>
-              </span>
-            </div>
-            <div class="formbox">
-              <div class="agree">
-                By clicking Sign Up, you agree to our <div class="link">Terms</div> and that you have read our <div class="link">Data Use Policy</div>, including our <div class="link">Cookie Use</div>.
-              </div>  
-            </div>
-            <div class="formbox">
-              <button type="submit" class="signbut bolder">Sign Up</button>
-            </div>
-          <div class="formbox">
-            <div class="create"><div class="link h">Create a Page</div> for a celebrity, band or business.</div>
-          </div>
-      </div>
-     </div>
-    </div>
+<div class="formbox">
+<button type="submit" class="signbut bolder">Sign Up</button>
+</div>
+<div class="formbox">
+<div class="create"><div class="link h">Create a Page</div> for a celebrity, band or business.</div>
+</div>
+</div>
+</div>
+</div>
   
   
