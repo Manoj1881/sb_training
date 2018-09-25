@@ -9,14 +9,20 @@
                 color: red;
             }
         </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+            <h1 class="header">facebook</h1>
+            <h2>Create a new account</h2>
+            <p>It 's free and always will be</p><br>
         <form method="post" action="">
-            UserName<input type="text" name="username"><br><br>
-            Email<input type="email" name="email"><br><br>
-            Password<input type="password" name="password" placeholder="password"><br>
-            Confirm Password<input type=" password" name="confirmpassword" placeholder="confirmpassword">
-
+         Username&nbsp;<input type="text" name="username"><br><br>
+            Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"><br><br>
+            Password&nbsp;<input type="password" name="password" placeholder="password"><br><br>
+            Date of Birth&nbsp;&nbsp;<input type="date" name="date"><br><br>
+            <input type="radio" name="radi" >Male  &nbsp;&nbsp;                                  
+            <input type="radio" name="radi">Female
+          <br><br>
             <input type="submit" value="register">
         </form>
 
@@ -36,11 +42,15 @@
                        },
                        password:{
                          required: true,
-                         minlength:5
+                         minlength:8
                          },
-                         confirmpassword: {
-                        required:true,
-                        equalto:"password"
+                         
+                         date:{
+                             required:true
+
+                         },
+                         radi:{
+                             required:true,
                          }
  
                    },
