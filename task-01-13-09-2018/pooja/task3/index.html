@@ -1,0 +1,70 @@
+<html>
+   <head>
+       <style type="text/css">
+           .valid {
+               border: 1px solid green;
+           }
+
+           .error {
+               color: red;
+           }
+       </style>
+       <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+           <h1 class="header">facebook</h1>
+           <h2>Create a new account</h2>
+           <p>It 's free and always will be</p><br>
+       <form id="contact"method="post" action="index.html">
+        Username&nbsp;<input type="text" name="username"><br><br>
+           Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"><br><br>
+           Password&nbsp;<input type="password" name="password" placeholder="password"><br><br>
+           Date of Birth&nbsp;&nbsp;<input type="date" name="date"><br><br>
+           <input type="radio" name="radi" >Male  &nbsp;&nbsp;                                  
+           <input type="radio" name="radi">Female
+         <br><br>
+           <input class="a" type="submit" value="register">
+       </form>
+
+       <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+       <script type="text/javascript">
+           $(document).ready(function() {
+            var valid= $('form').validate({
+                  rules: {
+                      username: {
+                          required: true,
+                          minlength: 5
+                      },
+                      email: {
+                          required: true,
+                          email: true
+                      },
+                      password:{
+                        required: true,
+                        minlength:8
+                        },
+                       
+                        date:{
+                            required:true
+
+                        },
+                        radi:{
+                            required:true,
+                        }
+
+                  },
+                 
+              });
+              $(".a").click(function(event){
+                       
+               //var form_data=$("#contact").form();
+
+if(valid.form()){
+  $("form").html("<p>form submitted successfully  </p>")
+}
+             });
+           });
+       </script>
+   </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+   <head>
+       <title>Jquery</title>
+       <link rel="stylesheet" href="style.css">
+       <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+       <script>
+           $(document).ready(function() {
+            var valid= $('form').validate({
+                  rules: {
+                      username: {
+                          required: true,
+                          minlength: 5
+                      },
+                      email: {
+                          required: true,
+                          email: true
+                      },
+                      password:{
+                        required: true,
+                        minlength:8,
+                        pwcheck: true
+                        },
+                       
+                        date:{
+                            required:true
+
+                        },
+                        radio:{
+                            required:true,
+                        }
+
+                  },
+                  messages:{
+                        password:{
+                        pwcheck: "should contain special characters and numbers also"
+                    }
+
+                }
+                 
+              });
+              $(".a").click(function(event){
+                       
+         
+if(valid.form()){
+  $("form").html("<p>form submitted successfully  </p>")
+}
+             });
+             $.validator.addMethod("pwcheck", function(value) {
+   return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+       && /[a-z]/.test(value) // has a lowercase letter
+       && /\d/.test(value) // has a digit
+});
+           });
+        </script>
+   </head>
+   <body>
+       <div class="page">
+           
+           <h2>Create a new account</h2>
+           <p>It 's free and always will be</p><br>
+       <form id="contact"method="post" action="index.html">
+        Username:<input type="text" name="username"><br><br>
+           
+           Password:<input type="password" name="password" ><br><br>
+           Email:<input type="email" name="email"><br><br>
+           Date of Birth:<input type="date" name="date"><br><br>
+           Gender:
+           <input type="radio" name="radio" >Male                                  
+           <input type="radio" name="radio">Female
+         <br><br>
+           <input class="a" type="submit" value="signup">
+       </form>
+
+      
+    </div>   
+   </body>
+</html>
