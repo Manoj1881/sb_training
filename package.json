@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,41 +20,12 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "angular-custom-modal": "^1.2.0",
-=======
-    "@reactivex/rxjs": "^6.3.3",
-    "angular2-jwt": "^0.2.3",
-    "body-parser": "^1.18.3",
->>>>>>> cb28b42115a4fa51f21ace5f64a7a80ee31df8dc
-=======
-    "@reactivex/rxjs": "^6.3.3",
-    "angular2-jwt": "^0.2.3",
-    "body-parser": "^1.18.3",
->>>>>>> cb28b42115a4fa51f21ace5f64a7a80ee31df8dc
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
-    "express": "^4.16.3",
-    "jsonwebtoken": "^8.3.0",
-    "morgan": "^1.9.1",
-    "mysql": "^2.16.0",
-    "ng-sidebar": "^8.0.0",
     "ngx-bootstrap": "^3.0.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "ngx-smart-modal": "^7.1.0",
-=======
-    "ngx-toastr": "^9.1.0",
-    "nodemon": "^1.18.4",
->>>>>>> cb28b42115a4fa51f21ace5f64a7a80ee31df8dc
-=======
-    "ngx-toastr": "^9.1.0",
-    "nodemon": "^1.18.4",
->>>>>>> cb28b42115a4fa51f21ace5f64a7a80ee31df8dc
     "rxjs": "~6.2.0",
-    "rxjs-compat": "^6.3.3",
-    "serve-favicon": "^2.5.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -78,5 +49,4 @@
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
   }
-  
 }

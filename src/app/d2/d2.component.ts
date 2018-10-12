@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {D2Service} from './d2.service';
 
 @Component({
   selector: 'app-d2',
@@ -8,16 +7,9 @@ import {D2Service} from './d2.service';
 })
 export class D2Component implements OnInit {
 
-  constructor(private D2service:D2Service) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-  
-  masterDataCreation(keyword,criteria){
-
-  	console.log("------------",keyword+"--"+criteria)
-   //this.D2service.masterDataCreation(data);
-   return false;
   }
 
 }
