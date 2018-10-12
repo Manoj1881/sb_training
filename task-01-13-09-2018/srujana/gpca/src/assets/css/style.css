@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400,700');
+
+
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .navbar{
+      width: 100%;
+  }
+
+.nav .navbar .search{
+    border-radius: 30px;
+    box-sizing: 20px;
+    opacity: 0.5;
+}
+.search {
+    position: relative;
+}
+.search::after {
+    content: "\f002";
+    font-family:'FontAwesome';
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
+.search input {
+    border-radius: 30px;
+    padding-left: 35px;
+}
+.card.bg-primary .card-body{
+   background-color: rgb(59,79,152);
+}
+.card.bg-warning .card-body{
+    background-color: green;
+}
+.card.bg-success .card-body{
+    background-color: grey;
+}
+
+.card-body i{
+    position: absolute;
+    display: inline-block;
+    text-align: left;
+    padding: 5px 15px 0px 170px;
+}
+.content {
+    padding: 20px 20px 20px 20px;
+    
+} 
+
+
+.content i {
+    position: absolute;
+    color:black;
+    display: inline-block; 
+    right:0;
+    border-radius: 60px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: rgb(59,79,152);
+    padding-top:4px;
+}  
+.clearfix {
+    clear: both;
+}
+.clearfix:after, .clearfix:before {
+    content: "";
+    clear: both;
+    display: table;
+}
+.content p{
+    padding: 10px;
+}
+
+
+  .doctor p, .image {
+      display: inline-block;
+      padding: 10px;
+  }
+  
+.next-block {
+    margin: 100px 0 0;
+    display: block;
+}
+.next-block a {
+    padding: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    font-size: 30px;
+}
+footer {
+    padding: 50px 0;
+}
+footer > div > * {
+    width: 33.33%;
+}
+footer > div > span:last-child {
+    text-align: right;
+}
+footer > div > a {
+    text-align: center;
+}
+#article-content {
+    display: block;
+    cursor: pointer;
+}
+#article-content:hover > #article-hover-content {
+    display: block;
+
+}
+#article-hover-content{
+    display: none;
+}
