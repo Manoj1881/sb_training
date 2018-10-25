@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function (){
+          
+                $('form').validate ({
+                    rules:{
+                        Name:{
+                            required: true,
+                        },
+                        password:{
+                            required: true,
+                            minlength: 8,
+                        },
+                        Email:{
+                            required: true,
+                            email: true,
+                        },
+                        date:{
+                            required: true,
+                            
+                        }
+                        
+                    },
+
+                });
+           
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="page">
+            <h1>Create an account</h1>
+            <p>It's free and always will be.</p><br>
+    <form  method="POST">
+           Name: <input type="text" name="Name" id="name"/><br>
+           Password:   <input type="password" name="password" id="password"><br>
+           Email:<input type="email" name="Email" id="email"><br><br>
+           Dateofbirth: <input type="date" name="date" value ="date"><br><br>
+           Gender: <input type="radio" name="gender" value="male"> Male 
+             <input type="radio" name="gender" value="female"> Female<br><br>            
+             <input type="submit" name="SignUp" value="SignUp">
+    </form>
+</div>  
+</body>
+</html>
