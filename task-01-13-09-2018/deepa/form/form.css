@@ -1,0 +1,22 @@
+.userform{width: 400px;}
+.userform p {
+    width: 100%;
+}
+.userform label {
+    width: 120px;
+    color: #333;
+    float: left;
+}
+input.error {
+    border: 1px dotted red;
+}
+label.error{
+    width: 100%;
+    color: red;
+    font-style: italic;
+    margin-left: 120px;
+    margin-bottom: 5px;
+}
+.userform input.submit {
+    margin-left: 120px;
+}
