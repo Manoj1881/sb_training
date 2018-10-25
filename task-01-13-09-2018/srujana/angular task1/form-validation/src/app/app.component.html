@@ -1,0 +1,55 @@
+<div>
+  <form [formGroup]='rForm' (ngSubmit)="onSubmit()">
+
+    <div class="form-container">
+      
+        <label for="firstname">First Name</label>
+          <input type="text" formControlName="name" id="firstname" required>
+          <br><br>
+          <div *ngIf="submitted && f.firstName.errors" class="alert">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+          <label for="lastaname">Last Name</label>
+            <input type="text" formControlName="name" id="lastname"  required>
+            <br><br>
+            <!-- <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">enter last name</div> -->
+          <label for="email">Email</label>
+              <input type="text" formControlName="email" id="email"  required>
+              <br><br>
+              <div *ngIf="submitted && f.email.errors" class="alert">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+
+          <label for="phoneNo">
+            PhoneNo 
+          </label>
+            <input type="text" formControlName="phoneNo" id="phoneNo" [(ngModel)]="phone" (input)="onChange($event)" maxlength="10" required>
+           <br> <br>
+          <div *ngIf="submitted && f.phoneNo.errors" class="alert">
+            <div *ngIf="f.phoneNo.errors.required"   >PhoneNo is required</div>
+            <div *ngIf="f.phoneNo.errors.minlength">Phoneno must be 10 characters</div>
+        </div>
+
+          <label>Password
+            <input type="password" formControlName="password"  required>
+          </label> <br><br>
+          <div *ngIf="submitted && f.password.errors" class="alert">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            
+        </div>
+          
+          <label>Confirm Password
+              <input type="password" formControlName="cnfpassword"  required>
+          </label>  <br>  <br>
+          <div *ngIf="submitted && f.password.errors" class="alert">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            
+        </div>
+        <input type="submit" class="button" value="Register" [disabled]="!rForm.valid">
+      </div>
+      
+
+  </form>
+</div>
+

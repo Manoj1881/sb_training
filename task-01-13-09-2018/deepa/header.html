@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>  sample page 
+</title>
+
+<style>
+header{
+width:100%;
+}
+
+.logo {
+ width: 14%;
+}
+
+.cols{
+width:70%;
+}
+.cols li{
+display :inline;
+
+  height: 19px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center; 
+padding:5px;
+
+}
+.list{
+display:inline-block;
+width:45%;
+  height: 14px;
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align-last:right;
+ border-radius:50%;
+background-color:#ddd;
+
+}
+
+.logo,.cols,.list{
+display:inline-block;
+text-align:center;
+} 
+.box{
+background-color:#f2f2f2;
+height:100%;
+padding:9.9%;
+}
+.box2{
+height:55%;
+box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+   background-color: #ffffff;
+   border: solid 1px #e5e5e5;
+}
+.container{
+	width: 70%;
+        float:right;
+}
+	.progressbar{
+	  counter-reset: step;
+	}
+	.progressbar li{
+	list-style-type: none;
+	float: left;
+	width: 17%;
+	position: relative;
+	text-align: center;
+	}
+	.progressbar li:before{
+	  content: counter(step);
+	  counter-increment: step; 
+	  width: 30px;
+	  height: 30px;
+	  line-height: 30px;
+	  border: 1px solid #ddd;
+	  display: block;
+	  text-align: center;
+	  margin: 0 auto 10px auto;
+	  border-radius: 50%;
+	  background-color: white;
+	}
+	.progressbar li:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: blue;
+	top: 15px;
+	left: -50%; 
+	z-index: -1;
+	}
+	.progressbar li:first-child:after {
+	  content: none;	
+	}
+	.progressbar li.active{
+	   color: blue;
+	   
+	}
+	.progressbar li.active:before{
+	border-color: #0791cd;
+        background-color: #0791cd;
+	text-color: black;
+	}
+ .progressbar li.before{
+    border-color:grey;
+    }
+    .progressbar li+ li:after{
+    background-color: grey;
+    }
+	
+</style>
+
+</head>
+
+<body>
+<header>
+ <div class ="logo">volnteermark</div>
+<div class = "cols">
+<ul>
+ <li>Home</li>
+  <li>Volunteer</li>
+  <li>Inbox</li>
+  <li>Org Info</li>
+  <li>Reports</li>
+  <li style="color:blue;">Discovery</li>
+</div>
+<div class ="list">AM</div>
+</header>
+<div class ="box">
+<div class ="box2">
+<div class = "container">
+<ul class="progressbar">
+	<li class="active"></li>
+	<li></li>
+	<li></li>
+       </ul>
+</div><br><br><br><br>
+<p style="text-align:center;"><b>Import people</b></p>
+<p style="text-align:center;">upload a .csv to import all your files   </p>
+<p style="text-align:center;"> you can match your columns once you upload.If you need an example, download<br></pr>
+<p style ="text-align:center;"> a sample .csv file here.</p><br>
+<input type="text" style="height:5%; width:15%;margin-left: 40%; "value="volneer.sample_csv">
+<button type="button" style="background-color: #84cf25;margin-left:auto;margin-right:auto;display:inline-block;height: 5%;width: 7%;">browser</button>
+<br><br><br>
+<button type="button" style="background-color: #84cf25;margin-left:auto;margin-right:auto;display:block;height: 5%;width: 8%;">
+                       Continue
+                    </button>
+</div>
+</div>
+ 
+</body>
+</html>

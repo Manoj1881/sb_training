@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+=======
 
 # Created by https://www.gitignore.io/api/linux,macos,windows,visualstudiocode
 
@@ -45,12 +67,28 @@ Temporary Items
 .apdisk
 
 ### VisualStudioCode ###
+>>>>>>> 9db9721a3ded2583ecd4fe8bb3a99d07a6a5b869
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
+<<<<<<< HEAD
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+=======
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -78,3 +116,4 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/linux,macos,windows,visualstudiocode
+>>>>>>> 9db9721a3ded2583ecd4fe8bb3a99d07a6a5b869

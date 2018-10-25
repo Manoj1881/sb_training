@@ -1,32 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>registration page</title>
-		<link rel="stylesheet"  href="style.css"/>
-	   <script type="text/javascript">
-                    function validateform(){  
-     if(document.getElementById("firstname").value=="") {
-            alert("please provide first name");
-            document.getElementById("firstname").focus();
+<html>
+  <head>
+    <title>registration page</title>
+    <meta charset=utf-8/>
+    <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+     
+     
+function check_info()
+{
+  
+      if(document.getElementById("fname").value=="") {
+            alert("Enter First Name");
+            document.getElementById("fname").focus();
             return false;
-                 }
-            if(document.getElementById("sname").value=="") {
-                alert("please provide surName");
-                document.getElementById("sname").focus(); 
-                return false;
-                   }
-      
+      }
+     if(document.getElementById("lname").value=="") {
+            alert("Enter last Name");
+            document.getElementById("lname").focus();
+            return false;
+      }
       if(document.getElementById("mobile").value=="") {
-            alert("please provide your mobile");
+            alert("Enter mobile");
             document.getElementById("mobile").focus();
             return false;
       }
       else {
         var mobile= document.getElementById("mobile").value;
-        var pattern=/\d{10}$/;
+        var pattern= /^[1-9]{1}[0-9]{9}$/;
         if(!pattern.test(mobile))
         {
           alert("Enter valid mobile");
@@ -34,13 +34,27 @@
           return false;
         }
       }
-      
       if(document.getElementById("password").value=="") {
-                alert("please provide correct password");
-                document.getElementById("password").focus(); 
-                return false;
-                    }
-                    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+             alert("Enter password");
+             document.getElementById("password").focus();
+             return false;
+       }
+       if((document.getElementById("password")).value==password.length < 8) {
+             alert("Enter password");
+             document.getElementById("password").focus();
+             return false;
+       }
+       if(document.getElementById("ConfirmPassword").value=="") {
+             alert("Enter confirmation password");
+             document.getElementById("ConfirmPassword").focus();
+             return false;
+       }
+      
+       if(document.getElementById("password").value != document.getElementById("ConfirmPassword").value) {
+             alert(" password do not match");
+             return false;
+       }
+       var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         if (reg.test(email.value) == false) 
         {
             alert('Invalid Email Address');
@@ -54,34 +68,39 @@
           document.getElementById("date").focus();
           return false;
         }
-        
- }
- </script>
- </head> 
- <body>
- <div class ="header">
-  <h1>Facebook</h1>
-</div>            
-<div class="page">
-
-    <h1>Create an account</h1>
-    <p>It's free and always will be.</p><br>
-        <form action="sucess.html" method="post" onsubmit="return validateform();">
-           
-           <input type="text" placeholder="First Name" id="firstname">
-           <input type="text" placeholder="Surname" id="sname"><br>
-            <input type="text" placeholder="Mobile number" id ="mobile"><br>
-           <input type="password" placeholder="New password" id="password"><br>
-        <input type="email" placeholder="Email" id="email"><br><br>
-           Dateofbirth: <input type="date" name="date" value ="date"><br><br>
-           
-            <input type="radio" name="gender" value="male"> Male 
-            <input type="radio" name="gender" value="female"> Female<br>
-
-            
-            <input type="submit" text="SignUp" value="SignUp">
+      
+     }
+    </script> 
+     
+  </head>
+  <body>
+       <div  class="header">
+           <h1>Facebook</h1>
        </div>
-        </form>
+      <div class="page">
+          
+    <h2>Create a new account</h2><br>
+    <p>It 's free and always will be</p><br>
+    <form action="sucess.html" method="post" onsubmit="return check_info();">
 
-</body>
+      
+      <input type="text" placeholder="FirstName" id="fname">
+     <input type="text" placeholder="LastName" id ="lname">
+      <br>
+      <input type="text" style="width: 300px; height:30px;" name="Email" placeholder="Enter mobile number or email address"id ="mobile"><br>
+      <input type="password" placeholder="Enter new password"id="password"><br>
+      <input type="password" placeholder="Confirm password"id="ConfirmPassword"><br>
+      <input type="email" placeholder="email" id="email"><br><br>
+      Birthday <input type="date"><br><br>
+
+        <input type="radio" name="radio" >Male  &nbsp;&nbsp;                                  
+        <input type="radio" name="radio">Female
+      <br><br>
+
+       <input type="submit" value="signup">
+      
+
+    </form>
+</div>
+  </body>
 </html>
