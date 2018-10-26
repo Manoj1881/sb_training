@@ -3,3 +3,17 @@
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
+
+$(document).ready(function(e) {
+    $('.nav .toggle-block').click(function(event){
+        event.preventDefault();
+        $(this).next('ul').toggle();
+        $(this).parents().toggleClass("active");
+    });
+    $(window).resize(function(){
+      var w = $(window).width();
+      if(w > 320 && $('.nav ul').is(':hidden')) {
+          $('.nav ul').removeAttr('style');
+    }
+    });
+});
