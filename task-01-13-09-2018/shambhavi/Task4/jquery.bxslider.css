@@ -1,4 +1,5 @@
 //All the functions will be called into this file
+
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
