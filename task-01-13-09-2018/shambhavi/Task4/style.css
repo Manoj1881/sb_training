@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* ==========================================================================
+   CSS Reset
+======================================================================= */
+/*
+* html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+* Richard Clark (http://richclarkdesign.com)
+* http://cssreset.com
+*/
+html,body,div,span,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+*,*:after,*:before {box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;}
+
+/* ==========================================================================
+   Common CSS
+   ========================================================================== */
+body {font: normal 14px/20px Arial, Helvetica, sans-serif;color: #4b4b4b;background: #fff;}
+ h2, h3, h4, h5, h6 {font-weight: normal;}
+a {outline: none;text-decoration: none;color: black;}
+a:hover,a:focus{text-decoration: underline;}
+.container {width: 960px;margin: 0 auto;}
+#wrapper {min-height: 100%;position: relative;}
+
+/*
+=========================================================================
+   Setting up the fonts
+========================================================================*/
+body{
+background-color:#FF777A;
+counter-reset: section;
+   }
+/* ==========================================================================
+Header
+======================================================================= */
+header img{
+    width: 150px;
+}
+/* ==========================================================================
+Footer
+========================================================================*/
+
+.footer{
+    width:100%;
+    float: left;
+    margin:15px 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid black;
+    padding: 15px;
+}
+.footer a{
+    float:right;
+}
+.footer p{
+    float:left;
+}
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.topnav {
+    text-align: left;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: grey;
+
+}
+
+.bxslider{
+    width:100%;
+}
+img{
+    width:100%;
+}
+.centered{
+   padding: 100px 0px 0px 189px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #FFA07A;
+
+}
+.row >div {
+    float: left;
+    width:33%;
+    padding:0px 15px;
+    
+}
+/*this is applied to the class1 class2 and class3*/
+.row >div >div{
+    border: 1px solid black;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+/*this is applied to the google chrome safari classes*/
+.row{
+    margin: 0 -15px;
+}
+.row p {
+    position: relative;
+    padding: 0 20px 0 20px;
+
+}
+.row p::before {
+  counter-increment: section;                 /* Increment the value of section counter by 1 */
+  content: counter(section);                 /* Display the value of section counter */
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left:5px;
+  top:2px;
+}
+.row p::after {
+  counter-increment: fgd;                 /* Increment the value of section counter by 1 */
+  content: counter(fgd);                 /* Display the value of section counter */
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left:auto;right:0;
+  top:2px;
+}
+
+.image{
+    position: relative;
+    padding: 20px;
+    }
+.image::after {
+    content:"";
+    position: absolute;
+    top:20px;
+    width: 96%;
+    height: 83%;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+@media only screen and  (max-width:1199px) {
+    body {
+        background-color: lightblue;
+    }
+}
+@media only screen and  (max-width:991px) {
+    body {
+        background-color: lightpink;
+       
+    }
+    .container{
+        width:750px;
+    }
+}
+@media only screen and  (max-width:767px) {
+    body {
+        background-color: lightgreen;
+    }
+    .container{
+        width:100%;
+    }
+    .image{
+    position: relative;
+    padding: 20px;
+    }
+.image::after {
+    content:"";
+    position: absolute;
+    top:20px;
+    width: 91%;
+    height: 67%;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+}
+.clearfix{
+    clear:both;
+    
+}
+.clearfix:after, .clearfix:before{
+ content: "";
+ display: table;
+ clear:both;
+}
