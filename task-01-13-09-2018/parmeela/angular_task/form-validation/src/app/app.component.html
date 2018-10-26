@@ -1,0 +1,61 @@
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h3>Angular 6 Reactive Form Validation</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" formC                                                                                                                  cccccccccccccccccccccccontrolName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                      </div><br><br>
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                      </div><br><br>
+                  </div>
+                  <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.errors.required">Email is required</div>
+                          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                      </div><br><br>
+                  </div>
+                  <div class="form-group">
+                    <label>phone NO</label>
+                    <input type="telephone" formControlName="phoneno" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneno.errors }" /> <br>
+                    <div *ngIf="submitted && f.phoneno.errors" class="invalid-feedback">
+                        <div *ngIf="f.phoneno.errors.required">phone NO is requide</div>
+                        <div *ngIf="f.phoneno.errors.email">phone NO must be a valid phone NO address</div>
+                    </div><br><br>
+                </div>
+                <div class="form-group">
+                  <label>Password
+                    <input type="password" formControlName="password"  required>
+                  </label> <br><br>
+                  <div *ngIf="submitted && f.password.errors" class="alert">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  
+                </div>
+                  
+                  <label> Confirm Password
+                      <input type="password" formControlName="cnfpassword"  required>
+                  </label>  <br>  <br>
+                  <div *ngIf="submitted && f.password.errors" class="alert">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                   </div> 
+                  <div class="form-group">
+                      <button class="btn btn-primary" [disabled]="!registerForm
+                      .valid">Register</button>
+                  </div>
+          </div>
+      
+
+
+
