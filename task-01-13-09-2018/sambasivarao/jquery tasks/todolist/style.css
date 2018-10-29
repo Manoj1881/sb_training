@@ -1,0 +1,19 @@
+.done{
+  text-decoration: line-through;
+  opacity: 50%;
+}
+#todos{
+  list-style-type: none;
+  
+  padding: 0;
+}
+
+#todos li{
+padding: 20px 0px 20px 0px;
+border-bottom: 1px solid #cec;
+}
+.deleteitem{
+  float: right;
+  color: red;
+  cursor: pointer;
+}
