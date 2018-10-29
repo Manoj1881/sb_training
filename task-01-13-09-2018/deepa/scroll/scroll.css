@@ -36,10 +36,18 @@ font-size: 12px;
  .w3r_font_color{
     color: blue;
   }
-p.center{
-    text-align: center;
-    color:blue;
+
+#focus{
+border:1px solid black;
+padding:10px;
 }
-p.large{
-    font-size :150%;
-}
+.red { 
+    color:red;
+  }
+  .blue { 
+    color:blue; 
+ }
+#fade{
+     background:#2E9AFE;
+     width:100%;
+ }
