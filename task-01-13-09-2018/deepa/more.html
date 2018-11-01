@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>frfbfh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+   
+ 
+   
+<script>
+     $(document).ready(function () {
+    size_li = $("#myList li").size();
+    x=2;
+    $('#myList li:lt('+x+')').show();
+    $('#loadMore').click(function () {
+        x= (x+2 <= size_li) ? x+2 : size_li;
+        $('#myList li:lt('+x+')').show();
+    });
+    $('#showLess').click(function () {
+        x=(x-2<0) ? 2 : x-2;
+        $('#myList li').not(':lt('+x+')').hide();
+    });
+}); 
+</script>
+<style>
+    #myList li{ display:none;
+}
+#loadMore {
+    color:green;
+    cursor:pointer;
+}
+#loadMore:hover {
+    color:black;
+}
+#showLess {
+    color:red;
+    cursor:pointer;
+}
+#showLess:hover {
+    color:black;
+}
+</style>
+</head>
+
+<body>
+<ol id="myList">
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+        <li><img src="http://lorempixel.com/100/60/" /></li>
+    
+</ol>
+<div id="loadMore">Load more</div>
+<div id="showLess">Show less</div>
+</body>
+</html>
+ 
