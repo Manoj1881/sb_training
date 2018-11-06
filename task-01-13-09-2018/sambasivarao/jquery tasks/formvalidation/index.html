@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+        <head>
+      <link rel="stylesheet" href="style.css">
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        </head>
+        <body>
+                 <div class="container mt-5">        
+                        <form id="first_form" method="post" action="">
+                                     <div class="form-group col-sm-5">
+                                         <label for="firstname">FirstName:</label>
+                                         <input type="text" class="form-control" id="firstname" placeholder="Enter firstname">                
+                                    </div>
+                                    <div class="form-group col-sm-5">
+                                         <label for="lastname">LastName:</label>
+                                         <input type="text" class="form-control" id="lastname" placeholder="Enter lastname">                
+                                    </div>
+                                    <div class="form-group col-sm-5">
+                                        <label for="Email">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Email">                
+                                   </div>
+                                  <div class="form-group col-sm-5">
+                                        <label for="phonenumber">phonenumber:</label>
+                                        <input type="number" class="form-control" id="phonenumber" placeholder="Enter phonenumber"onkeyup="myFun()">                
+                                  </div>
+                                 <div class="form-group col-sm-5">
+                                     <label for="zipcode">zipcode:</label>
+                                     <input type="number" class="form-control" id="zip" placeholder="Enter zipcode">                
+                                </div>
+                                <div class="form-group col-sm-5">
+                                    <label for="address">Address:</label>
+                                    <textarea class="form-control" id="address" placeholder="Enter Address"></textarea>              
+                               </div>
+                                <div>
+                                    <button type="submit" class="btn btn-success" value="Submit">Submit</button>         
+                                </div>
+                        </form>
+                </div>
+        <script src="code.js"></script>
+        </body>
+</html>
+
+
+<html>
+<body>
+
+<input type="text" id="myid" onkeyup="myFun()">
+
+
+<script>
+var counter = 0;
+function myFun() {
+
+    counter++;
+    if(counter==3)
+    {
+       var value = document.getElementById("myid").value;
+       value = value + "-";
+       document.getElementById("myid").value = value;
+       counter=0;
+    }
+}
+</script>
+
+</body>
+</html>
+

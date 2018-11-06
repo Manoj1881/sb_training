@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<div id="page1">
+            <form  method="post">
+                <input type="text" id="loginusername" placeholder="Username" />
+                <input type="password" id="loginpassword" placeholder="password" />
+                <input type="button" id="login" value="Sign In" />
+            </form>
+        </div>
+
+        <div id="page2">
+
+        </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+            // on click Sign In Button checks that username =='hai' and password == 'hai'
+            $("#login").click(function(){
+            if( $("#loginusername").val()=='hai' && $("#loginpassword").val()=='hai') {
+                    $("#page1").hide();
+                    $("#page2").append("<p>success!</p> <br/><input type='button' id='logout' value='Log Out' />");
+                }
+            else {
+                alert("Please try again");
+            }
+
+            $("#logout").click(function() {
+            $("form")[0].reset();
+            $("#page1").show();
+            $("#page2").hide();
+        });
+    });
+
+});
+</script>
+</body>
+</html>

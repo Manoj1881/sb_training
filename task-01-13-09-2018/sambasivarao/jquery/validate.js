@@ -2,24 +2,37 @@ $(document).ready(function() {
  
     $('#first_form').submit(function(e) {
       e.preventDefault();
-      var first_name = $('#first_name').val();
-      var last_name = $('#last_name').val();
+      var user = $('#username').val(); 
       var email = $('#email').val();
       var password = $('#password').val();
       var dob=$('#dob').val();
+      var gen=$('#gender').val();
    
-      $(".error").remove();
+       $(".error").remove();
    
-      if (first_name.length == "") {
-        $('#first_name').after('<span class="error">This field is required</span>');
+      if (user == "") {
+        $('#username').after('<span class="error">This field is required</span>');
       }
-      if (last_name.length < 1) {
-        $('#last_name').after('<span class="error">This field is required</span>');
-      }
-      if (email.length < 1) {
+      $('#username').keypress(function (e) {
+        var regex = new RegExp("^[a-zA-Z]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str)) {
+            return true;
+        }
+        else
+        {
+        e.preventDefault();
+        alert('Please Enter Alphabate');
+        return false;
+        }
+    });
+      
+      if (email.length == "") {
         $('#email').after('<span class="error">This field is required</span>');
       } else {
-        var regEx =/^\S+@\S+\.\S+$/;
+        // var regEx =/^\S+@\S+\.\S+$/;
+        var regEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}/;
+
         var validEmail = regEx.test(email);
         if (!validEmail) {
           $('#email').after('<span class="error">Enter a valid email</span>');
@@ -31,9 +44,13 @@ $(document).ready(function() {
       if(dob == ""){
                 $('#dob').after('<span class="error">This field is required</span>');
          }
+    
+
+
+
+
+
     });
-});
-    $(document).ready(function() {
     var max_fields      = 10; 
     var wrapper         = $(".inputadded"); 
     var add_button      = $(".button"); 
@@ -48,7 +65,8 @@ $(document).ready(function() {
 
     
 });
-  });
+});
+  
 
     
    

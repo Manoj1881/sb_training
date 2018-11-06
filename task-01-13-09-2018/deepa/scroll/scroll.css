@@ -1,0 +1,53 @@
+label {
+    display: block;
+    margin: 10px 0;
+}
+.zebraline{
+    width:200px;
+  
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+table, tr, th{
+   border:1px solid green;
+}
+table tr td{
+	width: 50%;
+	border: 1px solid black;
+	padding: 5px;
+	}
+.zebra{
+	background-color: yellowgreen;
+    }
+
+
+h1 {
+     margin: 10px ;
+    padding: 0 5px;
+font-size: 25px;
+     border: 2px double green;
+        }
+ .font{
+ margin:8px;
+font-size: 12px;
+ }
+ .w3r_font_color{
+    color: blue;
+  }
+
+#focus{
+border:1px solid black;
+padding:10px;
+}
+.red { 
+    color:red;
+  }
+  .blue { 
+    color:blue; 
+ }
+#fade{
+     background:#2E9AFE;
+     width:100%;
+ }

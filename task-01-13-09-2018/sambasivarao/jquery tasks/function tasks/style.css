@@ -1,0 +1,41 @@
+.scrool{
+    border:1px solid black;
+    width:50px;height:150px;
+    overflow:auto;
+}
+.table_style {
+	width: 500px;
+	margin: 0px auto;
+	}
+	table{
+	width: 100%;
+	border-collapse: collapse;
+	}
+	table tr td{
+	width: 50%;
+	border: 1px solid #ff751a;
+	padding: 5px;
+	}
+	table tr th{
+	border: 1px solid #79ff4d;
+	padding: 5px;
+	}
+	.zebra{
+	background-color:  #ff0066;
+	}
+	.intro {
+		font-size: 120%;
+		color: red;
+	}
+	h1 {
+		margin: 10px 0;
+		padding: 0 5px;
+		font-size: 2em;
+		border: 2px double green;
+	}
+	.w3r_font_color{
+		color: yellow;
+	}
+	p span{
+		text-decoration: underline;
+	  }
